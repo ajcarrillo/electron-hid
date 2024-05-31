@@ -1,0 +1,27 @@
+{
+  "name": "testing-electron-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"npm run start:react\" \"npm run start:electron\"",
+    "start:react": "cd frontend && npm run dev",
+    "start:electron": "wait-on http://localhost:3000 && electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^30.0.9",
+    "standard": "^17.1.0",
+    "wait-on": "^7.2.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "dependencies": {
+    "node-hid": "^3.0.0"
+  }
+}
